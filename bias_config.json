@@ -1,0 +1,884 @@
+{
+  "bitcoin": {
+    "meta_bucket_size": 10,
+    "hours": {
+      "0": {
+        "pct_mais": 53.5,
+        "samples": 155
+      },
+      "1": {
+        "pct_mais": 53.9,
+        "samples": 152
+      },
+      "2": {
+        "pct_mais": 49.0,
+        "samples": 147
+      },
+      "3": {
+        "pct_mais": 46.5,
+        "samples": 142
+      },
+      "4": {
+        "pct_mais": 38.9,
+        "samples": 144
+      },
+      "5": {
+        "pct_mais": 51.4,
+        "samples": 148
+      },
+      "6": {
+        "pct_mais": 51.7,
+        "samples": 149
+      },
+      "7": {
+        "pct_mais": 46.2,
+        "samples": 143
+      },
+      "8": {
+        "pct_mais": 61.6,
+        "samples": 151
+      },
+      "9": {
+        "pct_mais": 47.5,
+        "samples": 158
+      },
+      "10": {
+        "pct_mais": 49.3,
+        "samples": 148
+      },
+      "11": {
+        "pct_mais": 54.1,
+        "samples": 146
+      },
+      "12": {
+        "pct_mais": 53.2,
+        "samples": 141
+      },
+      "13": {
+        "pct_mais": 49.7,
+        "samples": 145
+      },
+      "14": {
+        "pct_mais": 54.0,
+        "samples": 139
+      },
+      "15": {
+        "pct_mais": 56.2,
+        "samples": 144
+      },
+      "16": {
+        "pct_mais": 61.1,
+        "samples": 144
+      },
+      "17": {
+        "pct_mais": 47.6,
+        "samples": 143
+      },
+      "18": {
+        "pct_mais": 51.4,
+        "samples": 148
+      },
+      "19": {
+        "pct_mais": 50.0,
+        "samples": 158
+      },
+      "20": {
+        "pct_mais": 46.1,
+        "samples": 154
+      },
+      "21": {
+        "pct_mais": 52.0,
+        "samples": 150
+      },
+      "22": {
+        "pct_mais": 51.3,
+        "samples": 152
+      },
+      "23": {
+        "pct_mais": 47.1,
+        "samples": 136
+      }
+    },
+    "meta": {},
+    "combos": {}
+  },
+  "rodovia": {
+    "meta_bucket_size": 20,
+    "hours": {
+      "0": {
+        "pct_mais": 33.8,
+        "samples": 139
+      },
+      "1": {
+        "pct_mais": 37.7,
+        "samples": 61
+      },
+      "2": {
+        "pct_mais": 54.3,
+        "samples": 35
+      },
+      "4": {
+        "pct_mais": 53.0,
+        "samples": 66
+      },
+      "5": {
+        "pct_mais": 68.0,
+        "samples": 150
+      },
+      "6": {
+        "pct_mais": 80.5,
+        "samples": 169
+      },
+      "7": {
+        "pct_mais": 52.4,
+        "samples": 168
+      },
+      "8": {
+        "pct_mais": 48.8,
+        "samples": 168
+      },
+      "9": {
+        "pct_mais": 49.7,
+        "samples": 173
+      },
+      "10": {
+        "pct_mais": 54.7,
+        "samples": 179
+      },
+      "11": {
+        "pct_mais": 52.0,
+        "samples": 173
+      },
+      "12": {
+        "pct_mais": 56.5,
+        "samples": 161
+      },
+      "13": {
+        "pct_mais": 52.1,
+        "samples": 165
+      },
+      "14": {
+        "pct_mais": 52.8,
+        "samples": 159
+      },
+      "15": {
+        "pct_mais": 53.6,
+        "samples": 151
+      },
+      "16": {
+        "pct_mais": 53.3,
+        "samples": 152
+      },
+      "17": {
+        "pct_mais": 50.7,
+        "samples": 152
+      },
+      "18": {
+        "pct_mais": 41.3,
+        "samples": 155
+      },
+      "19": {
+        "pct_mais": 40.6,
+        "samples": 155
+      },
+      "20": {
+        "pct_mais": 41.1,
+        "samples": 168
+      },
+      "21": {
+        "pct_mais": 46.3,
+        "samples": 164
+      },
+      "22": {
+        "pct_mais": 43.5,
+        "samples": 147
+      },
+      "23": {
+        "pct_mais": 43.9,
+        "samples": 148
+      }
+    },
+    "meta": {
+      "0": {
+        "pct_mais": 54.7,
+        "samples": 159
+      },
+      "20": {
+        "pct_mais": 50.8,
+        "samples": 362
+      },
+      "40": {
+        "pct_mais": 60.1,
+        "samples": 386
+      },
+      "60": {
+        "pct_mais": 51.5,
+        "samples": 497
+      },
+      "80": {
+        "pct_mais": 45.1,
+        "samples": 324
+      },
+      "100": {
+        "pct_mais": 46.7,
+        "samples": 353
+      },
+      "120": {
+        "pct_mais": 56.1,
+        "samples": 465
+      },
+      "140": {
+        "pct_mais": 50.6,
+        "samples": 427
+      },
+      "160": {
+        "pct_mais": 43.9,
+        "samples": 212
+      },
+      "180": {
+        "pct_mais": 41.8,
+        "samples": 146
+      },
+      "200": {
+        "pct_mais": 24.4,
+        "samples": 41
+      }
+    },
+    "combos": {
+      "17_200": {
+        "pct_mais": 24.0,
+        "samples": 25
+      },
+      "11_120": {
+        "pct_mais": 47.0,
+        "samples": 66
+      },
+      "14_40": {
+        "pct_mais": 72.2,
+        "samples": 18
+      },
+      "20_100": {
+        "pct_mais": 26.4,
+        "samples": 53
+      },
+      "18_120": {
+        "pct_mais": 82.6,
+        "samples": 23
+      },
+      "9_80": {
+        "pct_mais": 57.1,
+        "samples": 21
+      },
+      "22_80": {
+        "pct_mais": 34.4,
+        "samples": 32
+      },
+      "19_120": {
+        "pct_mais": 50.7,
+        "samples": 71
+      },
+      "15_140": {
+        "pct_mais": 44.9,
+        "samples": 49
+      },
+      "1_0": {
+        "pct_mais": 37.0,
+        "samples": 27
+      },
+      "16_120": {
+        "pct_mais": 57.1,
+        "samples": 21
+      },
+      "9_100": {
+        "pct_mais": 50.0,
+        "samples": 38
+      },
+      "6_20": {
+        "pct_mais": 73.2,
+        "samples": 41
+      },
+      "8_60": {
+        "pct_mais": 44.8,
+        "samples": 29
+      },
+      "16_180": {
+        "pct_mais": 26.7,
+        "samples": 15
+      },
+      "11_100": {
+        "pct_mais": 67.7,
+        "samples": 31
+      },
+      "7_40": {
+        "pct_mais": 54.0,
+        "samples": 50
+      },
+      "8_40": {
+        "pct_mais": 66.7,
+        "samples": 30
+      },
+      "19_140": {
+        "pct_mais": 29.5,
+        "samples": 44
+      },
+      "16_60": {
+        "pct_mais": 35.0,
+        "samples": 20
+      },
+      "5_20": {
+        "pct_mais": 65.8,
+        "samples": 79
+      },
+      "11_60": {
+        "pct_mais": 51.9,
+        "samples": 27
+      },
+      "19_100": {
+        "pct_mais": 46.7,
+        "samples": 30
+      },
+      "4_0": {
+        "pct_mais": 62.8,
+        "samples": 43
+      },
+      "8_120": {
+        "pct_mais": 66.7,
+        "samples": 18
+      },
+      "5_0": {
+        "pct_mais": 82.4,
+        "samples": 17
+      },
+      "4_20": {
+        "pct_mais": 34.8,
+        "samples": 23
+      },
+      "17_160": {
+        "pct_mais": 66.7,
+        "samples": 15
+      },
+      "22_60": {
+        "pct_mais": 48.5,
+        "samples": 66
+      },
+      "0_0": {
+        "pct_mais": 47.8,
+        "samples": 23
+      },
+      "13_160": {
+        "pct_mais": 44.0,
+        "samples": 25
+      },
+      "9_60": {
+        "pct_mais": 56.7,
+        "samples": 30
+      },
+      "14_120": {
+        "pct_mais": 56.8,
+        "samples": 44
+      },
+      "6_60": {
+        "pct_mais": 77.1,
+        "samples": 35
+      },
+      "13_120": {
+        "pct_mais": 57.9,
+        "samples": 38
+      },
+      "17_180": {
+        "pct_mais": 55.3,
+        "samples": 38
+      },
+      "18_180": {
+        "pct_mais": 25.0,
+        "samples": 24
+      },
+      "13_60": {
+        "pct_mais": 47.6,
+        "samples": 21
+      },
+      "18_160": {
+        "pct_mais": 34.0,
+        "samples": 50
+      },
+      "5_40": {
+        "pct_mais": 77.8,
+        "samples": 45
+      },
+      "14_140": {
+        "pct_mais": 47.7,
+        "samples": 44
+      },
+      "18_140": {
+        "pct_mais": 43.1,
+        "samples": 51
+      },
+      "9_120": {
+        "pct_mais": 42.0,
+        "samples": 50
+      },
+      "15_60": {
+        "pct_mais": 56.5,
+        "samples": 23
+      },
+      "13_140": {
+        "pct_mais": 51.2,
+        "samples": 41
+      },
+      "16_140": {
+        "pct_mais": 55.8,
+        "samples": 43
+      },
+      "9_40": {
+        "pct_mais": 64.7,
+        "samples": 17
+      },
+      "23_40": {
+        "pct_mais": 25.6,
+        "samples": 39
+      },
+      "21_100": {
+        "pct_mais": 24.1,
+        "samples": 29
+      },
+      "12_60": {
+        "pct_mais": 45.0,
+        "samples": 20
+      },
+      "6_40": {
+        "pct_mais": 75.0,
+        "samples": 36
+      },
+      "23_60": {
+        "pct_mais": 40.6,
+        "samples": 32
+      },
+      "1_20": {
+        "pct_mais": 38.2,
+        "samples": 34
+      },
+      "22_40": {
+        "pct_mais": 43.9,
+        "samples": 41
+      },
+      "12_120": {
+        "pct_mais": 53.8,
+        "samples": 26
+      },
+      "10_80": {
+        "pct_mais": 45.0,
+        "samples": 20
+      },
+      "0_40": {
+        "pct_mais": 33.3,
+        "samples": 24
+      },
+      "7_60": {
+        "pct_mais": 37.0,
+        "samples": 27
+      },
+      "10_60": {
+        "pct_mais": 75.0,
+        "samples": 20
+      },
+      "11_140": {
+        "pct_mais": 57.9,
+        "samples": 19
+      },
+      "16_160": {
+        "pct_mais": 65.0,
+        "samples": 20
+      },
+      "10_140": {
+        "pct_mais": 58.8,
+        "samples": 17
+      },
+      "12_140": {
+        "pct_mais": 71.7,
+        "samples": 46
+      },
+      "21_80": {
+        "pct_mais": 46.6,
+        "samples": 58
+      },
+      "14_100": {
+        "pct_mais": 50.0,
+        "samples": 24
+      },
+      "17_60": {
+        "pct_mais": 57.9,
+        "samples": 19
+      },
+      "20_60": {
+        "pct_mais": 64.5,
+        "samples": 31
+      },
+      "12_160": {
+        "pct_mais": 41.2,
+        "samples": 34
+      },
+      "8_80": {
+        "pct_mais": 44.4,
+        "samples": 27
+      },
+      "3_0": {
+        "pct_mais": 25.0,
+        "samples": 16
+      },
+      "21_60": {
+        "pct_mais": 53.4,
+        "samples": 73
+      },
+      "0_20": {
+        "pct_mais": 31.5,
+        "samples": 89
+      },
+      "7_180": {
+        "pct_mais": 57.1,
+        "samples": 42
+      },
+      "2_0": {
+        "pct_mais": 60.7,
+        "samples": 28
+      },
+      "10_100": {
+        "pct_mais": 53.7,
+        "samples": 54
+      },
+      "8_160": {
+        "pct_mais": 18.8,
+        "samples": 16
+      },
+      "20_80": {
+        "pct_mais": 45.2,
+        "samples": 73
+      },
+      "15_100": {
+        "pct_mais": 36.8,
+        "samples": 19
+      },
+      "23_20": {
+        "pct_mais": 54.8,
+        "samples": 73
+      },
+      "8_140": {
+        "pct_mais": 53.6,
+        "samples": 28
+      },
+      "17_140": {
+        "pct_mais": 50.0,
+        "samples": 20
+      },
+      "17_120": {
+        "pct_mais": 86.7,
+        "samples": 15
+      },
+      "15_120": {
+        "pct_mais": 92.0,
+        "samples": 25
+      },
+      "10_120": {
+        "pct_mais": 47.2,
+        "samples": 53
+      }
+    }
+  },
+  "rua": {
+    "meta_bucket_size": 10,
+    "hours": {
+      "0": {
+        "pct_mais": 54.1,
+        "samples": 109
+      },
+      "1": {
+        "pct_mais": 50.5,
+        "samples": 103
+      },
+      "2": {
+        "pct_mais": 59.0,
+        "samples": 100
+      },
+      "3": {
+        "pct_mais": 47.7,
+        "samples": 111
+      },
+      "4": {
+        "pct_mais": 52.5,
+        "samples": 118
+      },
+      "5": {
+        "pct_mais": 51.7,
+        "samples": 118
+      },
+      "6": {
+        "pct_mais": 59.0,
+        "samples": 105
+      },
+      "7": {
+        "pct_mais": 53.5,
+        "samples": 99
+      },
+      "8": {
+        "pct_mais": 52.2,
+        "samples": 92
+      },
+      "9": {
+        "pct_mais": 56.8,
+        "samples": 88
+      },
+      "10": {
+        "pct_mais": 51.3,
+        "samples": 117
+      },
+      "11": {
+        "pct_mais": 51.7,
+        "samples": 118
+      },
+      "12": {
+        "pct_mais": 41.1,
+        "samples": 124
+      },
+      "13": {
+        "pct_mais": 53.7,
+        "samples": 134
+      },
+      "14": {
+        "pct_mais": 58.9,
+        "samples": 129
+      },
+      "15": {
+        "pct_mais": 52.4,
+        "samples": 103
+      },
+      "16": {
+        "pct_mais": 57.0,
+        "samples": 100
+      },
+      "17": {
+        "pct_mais": 60.4,
+        "samples": 101
+      },
+      "18": {
+        "pct_mais": 58.1,
+        "samples": 93
+      },
+      "19": {
+        "pct_mais": 57.5,
+        "samples": 106
+      },
+      "20": {
+        "pct_mais": 49.5,
+        "samples": 93
+      },
+      "21": {
+        "pct_mais": 52.0,
+        "samples": 98
+      },
+      "22": {
+        "pct_mais": 63.6,
+        "samples": 88
+      },
+      "23": {
+        "pct_mais": 55.8,
+        "samples": 95
+      }
+    },
+    "meta": {
+      "50": {
+        "pct_mais": 80.0,
+        "samples": 25
+      },
+      "60": {
+        "pct_mais": 69.4,
+        "samples": 49
+      },
+      "70": {
+        "pct_mais": 77.0,
+        "samples": 61
+      },
+      "80": {
+        "pct_mais": 70.9,
+        "samples": 86
+      },
+      "90": {
+        "pct_mais": 57.8,
+        "samples": 83
+      },
+      "100": {
+        "pct_mais": 67.1,
+        "samples": 85
+      },
+      "110": {
+        "pct_mais": 51.8,
+        "samples": 85
+      },
+      "120": {
+        "pct_mais": 41.7,
+        "samples": 72
+      },
+      "130": {
+        "pct_mais": 50.0,
+        "samples": 60
+      },
+      "140": {
+        "pct_mais": 46.8,
+        "samples": 62
+      },
+      "150": {
+        "pct_mais": 48.9,
+        "samples": 47
+      },
+      "160": {
+        "pct_mais": 52.6,
+        "samples": 38
+      },
+      "170": {
+        "pct_mais": 67.3,
+        "samples": 49
+      },
+      "180": {
+        "pct_mais": 57.9,
+        "samples": 38
+      },
+      "190": {
+        "pct_mais": 57.1,
+        "samples": 49
+      },
+      "200": {
+        "pct_mais": 60.5,
+        "samples": 43
+      },
+      "210": {
+        "pct_mais": 54.5,
+        "samples": 66
+      },
+      "220": {
+        "pct_mais": 59.8,
+        "samples": 82
+      },
+      "230": {
+        "pct_mais": 66.7,
+        "samples": 63
+      },
+      "240": {
+        "pct_mais": 65.5,
+        "samples": 87
+      },
+      "250": {
+        "pct_mais": 66.3,
+        "samples": 92
+      },
+      "260": {
+        "pct_mais": 62.0,
+        "samples": 92
+      },
+      "270": {
+        "pct_mais": 57.4,
+        "samples": 122
+      },
+      "280": {
+        "pct_mais": 62.7,
+        "samples": 110
+      },
+      "290": {
+        "pct_mais": 63.0,
+        "samples": 108
+      },
+      "300": {
+        "pct_mais": 44.3,
+        "samples": 122
+      },
+      "310": {
+        "pct_mais": 45.3,
+        "samples": 106
+      },
+      "320": {
+        "pct_mais": 45.7,
+        "samples": 105
+      },
+      "330": {
+        "pct_mais": 45.9,
+        "samples": 98
+      },
+      "340": {
+        "pct_mais": 29.8,
+        "samples": 84
+      },
+      "350": {
+        "pct_mais": 40.0,
+        "samples": 70
+      },
+      "360": {
+        "pct_mais": 34.7,
+        "samples": 49
+      },
+      "370": {
+        "pct_mais": 37.3,
+        "samples": 51
+      },
+      "380": {
+        "pct_mais": 26.1,
+        "samples": 23
+      },
+      "390": {
+        "pct_mais": 12.9,
+        "samples": 31
+      }
+    },
+    "combos": {
+      "17_80": {
+        "pct_mais": 75.0,
+        "samples": 16
+      },
+      "2_340": {
+        "pct_mais": 50.0,
+        "samples": 16
+      },
+      "6_270": {
+        "pct_mais": 47.4,
+        "samples": 19
+      },
+      "15_90": {
+        "pct_mais": 47.6,
+        "samples": 21
+      },
+      "14_80": {
+        "pct_mais": 72.7,
+        "samples": 22
+      },
+      "14_110": {
+        "pct_mais": 26.3,
+        "samples": 19
+      },
+      "3_370": {
+        "pct_mais": 40.0,
+        "samples": 15
+      },
+      "13_100": {
+        "pct_mais": 84.2,
+        "samples": 19
+      },
+      "17_100": {
+        "pct_mais": 60.0,
+        "samples": 20
+      },
+      "14_90": {
+        "pct_mais": 62.5,
+        "samples": 16
+      },
+      "13_110": {
+        "pct_mais": 70.6,
+        "samples": 17
+      },
+      "16_60": {
+        "pct_mais": 60.0,
+        "samples": 20
+      },
+      "16_70": {
+        "pct_mais": 64.7,
+        "samples": 17
+      }
+    }
+  },
+  "_generated_at": "2026-04-23 20:09:02"
+}

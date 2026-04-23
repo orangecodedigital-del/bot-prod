@@ -1,0 +1,2 @@
+[2026-04-15 22:44:40] RUA#39168 SENT AO VIVO MAIS amount=22.37 BRLX odd=0.72 (1.39x) conf=94% api=201 outcome=-- | Ordem automatica enviada: AO VIVO MAIS | 22.37 BRLX | odd 0.72 (1.39x) | lucro esp. 8.70 BRLX | 94% | topo real do book 0.76 (1.32x) | alvo aleatorio 1.38x
+[2026-04-15 22:45:05] RODOVIA#39169 SENT AO VIVO MAIS amount=22.37 BRLX odd=0.78 (1.28x) conf=94% api=201 outcome=-- | Ordem automatica enviada: AO VIVO MAIS | 22.37 BRLX | odd 0.78 (1.28x) | lucro esp. 6.31 BRLX | 94% | topo real do book 0.65 (1.55x) | alvo aleatorio 1.29x

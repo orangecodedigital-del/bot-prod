@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodovia — Monitor em Tempo Real</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --border: #2a2d3a;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --accent: #3b82f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    header p { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+    .card-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    /* Status dot */
+    .status-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: var(--muted);
+    }
+    .status-dot.live   { background: var(--green); animation: pulse 1.4s infinite; }
+    .status-dot.error  { background: var(--red); }
+    .status-dot.wait   { background: var(--yellow); }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Contagem grande */
+    #count-display {
+      font-size: 5rem;
+      font-weight: 800;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: -2px;
+      transition: color 0.3s;
+      color: var(--text);
+    }
+    #count-display.flash { animation: flash 0.4s; }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    #timer {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Últimos resultados */
+    .results-strip {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .result-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .result-badge.mais { background: rgba(34,197,94,0.15); color: var(--green); border: 2px solid var(--green); }
+    .result-badge.ate  { background: rgba(239,68,68,0.15);  color: var(--red);   border: 2px solid var(--red); }
+
+    /* Tabela de histórico */
+    .history-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .history-section h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+    tbody td {
+      padding: 12px 14px;
+      font-size: 0.9rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .tag.mais { background: rgba(34,197,94,0.15); color: var(--green); }
+    .tag.ate  { background: rgba(239,68,68,0.15);  color: var(--red); }
+    .tag.pendente { background: rgba(100,116,139,0.2); color: var(--muted); }
+
+    #status-bar {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .count-big-green { color: var(--green); }
+    .count-big-red   { color: var(--red); }
+
+    #no-history {
+      text-align: center;
+      padding: 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Probabilidade */
+    .prob-bar-wrap { margin-top: 10px; }
+    .prob-bar {
+      display: flex;
+      height: 28px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--border);
+    }
+    .prob-bar .seg-mais { background: var(--green); display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; color: #fff; transition: width .5s; }
+    .prob-bar .seg-ate  { background: var(--red);   display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; color: #fff; transition: width .5s; }
+    .prob-legend { display: flex; justify-content: space-between; margin-top: 6px; font-size: .8rem; color: var(--muted); }
+    .prob-legend .lv { font-weight: 700; font-size: 1.1rem; }
+    .prob-legend .lv.green { color: var(--green); }
+    .prob-legend .lv.red   { color: var(--red); }
+
+    /* Peak hours */
+    .peak-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .peak-cell {
+      border-radius: 8px;
+      padding: 6px 4px;
+      text-align: center;
+      font-size: .75rem;
+      background: var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .peak-cell .ph-hour { font-weight: 700; font-size: .85rem; }
+    .peak-cell .ph-pct  { color: var(--muted); font-size: .7rem; }
+    .peak-cell .ph-bar  { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--accent); transition: width .4s; }
+    .peak-cell.hot { background: rgba(59,130,246,.12); border: 1px solid var(--accent); }
+
+    /* Por cidade */
+    .city-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .city-card:last-child { margin-bottom: 0; }
+    .city-name { font-size: .82rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .city-bar  { display: flex; height: 20px; border-radius: 6px; overflow: hidden; background: var(--border); }
+    .city-bar .seg-mais { background: var(--green); display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:700; color:#fff; transition: width .5s; }
+    .city-bar .seg-ate  { background: var(--red);   display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:700; color:#fff; transition: width .5s; }
+    .city-meta { display:flex; justify-content:space-between; margin-top:4px; font-size:.75rem; color:var(--muted); }
+    .city-meta .cv { font-weight:700; }
+    .city-meta .cv.g { color:var(--green); }
+    .city-meta .cv.r { color:var(--red); }
+    #city-stats-wrap { max-height: 380px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚗 Rodovia (5 min) — Monitor</h1>
+  <p>previsao.io · atualização em tempo real · <span id="market-id-label" style="color:var(--accent)">market #—</span></p>
+  <p id="location-label" style="color:var(--yellow); font-size:0.85rem; margin-top:4px"></p>
+</header>
+
+<div id="status-bar">
+  <span class="status-dot" id="dot"></span>
+  <span id="status-text">Conectando...</span>
+</div>
+
+<div class="grid">
+
+  <!-- Contagem ao vivo -->
+  <div class="card">
+    <div class="card-title">Contagem Atual</div>
+    <div id="count-display">—</div>
+    <div id="timer">aguardando dados...</div>
+  </div>
+
+  <!-- Últimos resultados -->
+  <div class="card">
+    <div class="card-title">Últimos Resultados</div>
+    <div class="results-strip" id="last-results">
+      <span style="color:var(--muted); font-size:.85rem">Nenhum resultado ainda</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Probabilidade + Horários de pico -->
+<div class="grid" style="max-width:900px;margin:0 auto 28px">
+
+  <div class="card">
+    <div class="card-title">🎯 Probabilidade (últimas rodadas)</div>
+    <div id="prob-location" style="font-size:.78rem;color:var(--muted);margin-bottom:8px">calculando...</div>
+    <div class="prob-bar-wrap">
+      <div class="prob-bar">
+        <div class="seg-mais" id="prob-bar-mais" style="width:50%"></div>
+        <div class="seg-ate"  id="prob-bar-ate"  style="width:50%"></div>
+      </div>
+      <div class="prob-legend">
+        <div>▲ Mais &nbsp;<span class="lv green" id="prob-mais-pct">—</span></div>
+        <div><span id="prob-sample" style="font-size:.75rem"></span></div>
+        <div>▼ Até &nbsp;<span class="lv red" id="prob-ate-pct">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🕒 Pico por Horário</div>
+    <div id="peak-location" style="font-size:.78rem;color:var(--muted);margin-bottom:8px">calculando...</div>
+    <div class="peak-grid" id="peak-grid"></div>
+  </div>
+
+</div>
+
+<!-- Por cidade -->
+<div class="history-section card" style="max-width:900px;margin:0 auto 28px">
+  <h2>📍 Probabilidade por Cidade</h2>
+  <div id="city-stats-wrap"><p style="color:var(--muted);font-size:.85rem;text-align:center;padding:20px">Aguardando dados de múltiplas rodadas...</p></div>
+</div>
+<div class="history-section card">
+  <h2>Histórico de Rodadas</h2>
+  <div id="history-wrap">
+    <div id="no-history">Nenhuma rodada encerrada ainda nesta sessão.</div>
+    <table id="history-table" style="display:none">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Horário</th>
+          <th>Localidade</th>
+          <th>Contagem Final</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody id="history-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  // ──────────────────────────────────────────
+  // Estado inicial (injetado pelo Flask)
+  // ──────────────────────────────────────────
+  const initialState   = {{ state | tojson }};
+  const initialHistory = {{ history | tojson }};
+  const initialLast    = {{ last_results | tojson }};
+
+  let roundCounter = initialHistory.length;
+
+  // ──────────────────────────────────────────
+  // Stats (probabilidade + pico horário)
+  // ──────────────────────────────────────────
+  function computeAndRenderStats(histArr, location) {
+    const entries = histArr.filter(e => e.result);
+    if (entries.length === 0) return;
+
+    // Filtra por localidade se tiver dados suficientes
+    let pool = entries;
+    if (location) {
+      const locPool = entries.filter(e => e.location === location);
+      if (locPool.length >= 3) pool = locPool;
+    }
+
+    const last50 = pool.slice(0, 50);
+    const mais   = last50.filter(e => e.result.includes('MAIS')).length;
+    const ate    = last50.length - mais;
+    const total  = last50.length;
+    const pMais  = total ? (mais / total * 100).toFixed(1) : '0';
+    const pAte   = total ? (ate  / total * 100).toFixed(1) : '0';
+
+    document.getElementById('prob-bar-mais').style.width = pMais + '%';
+    document.getElementById('prob-bar-ate').style.width  = pAte  + '%';
+    document.getElementById('prob-bar-mais').textContent = pMais > 12 ? pMais + '%' : '';
+    document.getElementById('prob-bar-ate').textContent  = pAte  > 12 ? pAte  + '%' : '';
+    document.getElementById('prob-mais-pct').textContent = pMais + '%';
+    document.getElementById('prob-ate-pct').textContent  = pAte  + '%';
+    document.getElementById('prob-sample').textContent   = `${total} rodadas`;
+    const locLabel = pool === entries ? 'todas as localidades' : location;
+    document.getElementById('prob-location').textContent = `📍 ${locLabel}`;
+
+    // Horários de pico (usa todas as entradas de pool)
+    const byHour = {};
+    pool.forEach(e => {
+      const h = e.time ? parseInt(e.time.slice(0, 2)) : NaN;
+      if (isNaN(h)) return;
+      if (!byHour[h]) byHour[h] = { mais: 0, ate: 0, total: 0, sumCount: 0 };
+      byHour[h].total++;
+      byHour[h].sumCount += (e.count || 0);
+      if (e.result.includes('MAIS')) byHour[h].mais++;
+      else byHour[h].ate++;
+    });
+
+    const maxTotal = Math.max(...Object.values(byHour).map(v => v.total), 1);
+    const hours = Object.keys(byHour).map(Number).sort((a, b) => a - b);
+    const grid  = document.getElementById('peak-grid');
+    grid.innerHTML = '';
+    hours.forEach(h => {
+      const v   = byHour[h];
+      const pct = Math.round(v.total / maxTotal * 100);
+      const avg = v.total ? Math.round(v.sumCount / v.total) : 0;
+      const hot = pct >= 70;
+      const cell = document.createElement('div');
+      cell.className = 'peak-cell' + (hot ? ' hot' : '');
+      cell.title     = `${v.total} rodadas • média ${avg} carros • ${Math.round(v.mais/v.total*100)}% mais`;
+      cell.innerHTML = `
+        <div class="ph-hour">${String(h).padStart(2,'0')}h</div>
+        <div class="ph-pct">${v.total}x</div>
+        <div class="ph-bar" style="width:${pct}%"></div>
+      `;
+      grid.appendChild(cell);
+    });
+
+    const peakH = hours.reduce((best, h) => byHour[h].total > byHour[best].total ? h : best, hours[0]);
+    if (peakH !== undefined) {
+      document.getElementById('peak-location').textContent = `📍 ${locLabel} • pico: ${String(peakH).padStart(2,'0')}h (${byHour[peakH].total} rodadas)`;
+    }
+
+    // ─── Por cidade ───
+    const byCity = {};
+    entries.forEach(e => {
+      const city = e.location || 'Desconhecida';
+      if (!byCity[city]) byCity[city] = { mais: 0, ate: 0 };
+      if (e.result.includes('MAIS')) byCity[city].mais++;
+      else byCity[city].ate++;
+    });
+    const cities = Object.entries(byCity).sort((a, b) => (b[1].mais + b[1].ate) - (a[1].mais + a[1].ate));
+    const wrap = document.getElementById('city-stats-wrap');
+    if (cities.length === 0) return;
+    wrap.innerHTML = '';
+    cities.forEach(([city, v]) => {
+      const t  = v.mais + v.ate;
+      const pm = (v.mais / t * 100).toFixed(0);
+      const pa = (v.ate  / t * 100).toFixed(0);
+      const rec = v.mais >= v.ate
+        ? `<span style="color:var(--green);font-weight:700">▲ Mais (${pm}%)</span>`
+        : `<span style="color:var(--red);font-weight:700">▼ Até (${pa}%)</span>`;
+      const div = document.createElement('div');
+      div.className = 'city-card';
+      div.innerHTML = `
+        <div class="city-name">📍 ${city}</div>
+        <div class="city-bar">
+          <div class="seg-mais" style="width:${pm}%">${pm > 15 ? pm+'%' : ''}</div>
+          <div class="seg-ate"  style="width:${pa}%">${pa > 15 ? pa+'%' : ''}</div>
+        </div>
+        <div class="city-meta">
+          <span>▲ Mais: <span class="cv g">${v.mais}x (${pm}%)</span></span>
+          <span style="color:var(--muted)">${t} rodadas</span>
+          <span>▼ Até: <span class="cv r">${v.ate}x (${pa}%)</span></span>
+        </div>
+        <div style="font-size:.75rem;margin-top:4px;color:var(--muted)">Apostar em: ${rec}</div>
+      `;
+      wrap.appendChild(div);
+    });
+  }
+  // ──────────────────────────────────────────
+  function setStatus(type, text) {
+    const dot = document.getElementById('dot');
+    const st  = document.getElementById('status-text');
+    dot.className = 'status-dot';
+    if (type === 'live')  dot.classList.add('live');
+    if (type === 'error') dot.classList.add('error');
+    if (type === 'wait')  dot.classList.add('wait');
+    st.textContent = text;
+  }
+
+  function setMarketId(id) {
+    const el = document.getElementById('market-id-label');
+    if (el && id) el.textContent = `market #${id}`;
+  }
+
+  function setLocation(loc) {
+    const el = document.getElementById('location-label');
+    if (!el) return;
+    el.textContent = loc ? `📍 ${loc}` : '';
+  }
+
+  // ──────────────────────────────────────────
+  // Timer local decrescente
+  // ──────────────────────────────────────────
+  let timerInterval = null;
+  let remainingRef = null;
+
+  function startLocalTimer(seconds) {
+    if (timerInterval) clearInterval(timerInterval);
+    remainingRef = seconds;
+    renderTimer(remainingRef);
+    timerInterval = setInterval(() => {
+      if (remainingRef === null) return;
+      remainingRef = Math.max(0, remainingRef - 1);
+      renderTimer(remainingRef);
+    }, 1000);
+  }
+
+  function renderTimer(rem) {
+    const timer = document.getElementById('timer');
+    if (rem === null || rem === undefined) {
+      timer.textContent = 'aguardando dados...';
+      return;
+    }
+    const m = Math.floor(rem / 60);
+    const s = String(rem % 60).padStart(2, '0');
+    timer.textContent = `⏱ ${m}:${s} restantes`;
+  }
+
+  function updateCount(count, remaining, valueNeeded) {
+    const el = document.getElementById('count-display');
+    el.textContent = count ?? '—';
+    el.className = '';
+    const thr = valueNeeded ?? initialState.value_needed ?? 102;
+    if (count !== null && count !== undefined) {
+      el.classList.add(count > thr ? 'count-big-green' : 'count-big-red');
+      el.classList.add('flash');
+      setTimeout(() => el.classList.remove('flash'), 400);
+    }
+    if (remaining !== null && remaining !== undefined) {
+      const rem = Math.round(remaining);
+      // Só reinicia o timer se ele não está rodando ou se o valor diverge muito do local
+      if (timerInterval === null || remainingRef === null || Math.abs(remainingRef - rem) > 8) {
+        startLocalTimer(rem);
+      }
+    }
+  }
+
+  function badgeFor(result) {
+    if (!result) return '<span class="result-badge ate">?</span>';
+    return result.includes('MAIS')
+      ? '<span class="result-badge mais">▲</span>'
+      : '<span class="result-badge ate">▼</span>';
+  }
+
+  function renderLastResults(arr) {
+    const el = document.getElementById('last-results');
+    if (!arr || arr.length === 0) {
+      el.innerHTML = '<span style="color:var(--muted); font-size:.85rem">Nenhum resultado ainda</span>';
+      return;
+    }
+    el.innerHTML = arr.map(r => badgeFor(r)).join('');
+  }
+
+  function addHistoryRow(entry, index) {
+    const tbody = document.getElementById('history-body');
+    const noHist = document.getElementById('no-history');
+    const table  = document.getElementById('history-table');
+
+    noHist.style.display = 'none';
+    table.style.display  = '';
+
+    const tagClass = entry.result
+      ? (entry.result.includes('MAIS') ? 'mais' : 'ate')
+      : 'pendente';
+    const thr = entry.value_needed ?? '?';
+    const tagLabel = entry.result
+      ? (entry.result.includes('MAIS') ? `Mais de ${thr}` : `Até ${thr}`)
+      : 'Pendente';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="color:var(--muted)">#${index}</td>
+      <td>${entry.time}</td>
+      <td style="color:var(--yellow);font-size:.8rem">${entry.location ?? '<span style="color:var(--muted)">—</span>'}</td>
+      <td><strong>${entry.count ?? '—'}</strong></td>
+      <td><span class="tag ${tagClass}">${tagLabel}</span></td>
+    `;
+    tbody.insertBefore(tr, tbody.firstChild);
+  }
+
+  function renderFullHistory(arr) {
+    const tbody  = document.getElementById('history-body');
+    const noHist = document.getElementById('no-history');
+    const table  = document.getElementById('history-table');
+    tbody.innerHTML = '';
+    if (!arr || arr.length === 0) {
+      noHist.style.display = '';
+      table.style.display  = 'none';
+      return;
+    }
+    noHist.style.display = 'none';
+    table.style.display  = '';
+    arr.forEach((entry, i) => {
+      const tagClass = entry.result
+        ? (entry.result.includes('MAIS') ? 'mais' : 'ate') : 'pendente';
+      const thr = entry.value_needed ?? '?';
+      const tagLabel = entry.result
+        ? (entry.result.includes('MAIS') ? `Mais de ${thr}` : `Até ${thr}`) : 'Pendente';
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="color:var(--muted)">#${arr.length - i}</td>
+        <td>${entry.time}</td>
+        <td style="color:var(--yellow);font-size:.8rem">${entry.location ?? '<span style="color:var(--muted)">—</span>'}</td>
+        <td><strong>${entry.count ?? '—'}</strong></td>
+        <td><span class="tag ${tagClass}">${tagLabel}</span></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Mantém hist histórico local atualizado para stats
+  let localHistory = [...initialHistory];
+  let localLocation = initialState.location;
+
+  // Inicializa stats
+  computeAndRenderStats(localHistory, localLocation);
+
+  // ──────────────────────────────────────────
+  // ──────────────────────────────────────────
+  updateCount(initialState.current_count, initialState.remaining_seconds);
+  renderLastResults(initialLast);
+  renderFullHistory(initialHistory);
+  roundCounter = initialHistory.length;
+
+  const statusMap = {
+    'ao_vivo': ['live', '🔴 AO VIVO'],
+    'encerrado': ['wait', 'Rodada encerrada'],
+    'reconectando': ['wait', 'Reconectando...'],
+    'erro': ['error', 'Erro de conexão'],
+    'aguardando': ['wait', 'Aguardando...'],
+  };
+  const [sType, sText] = statusMap[initialState.status] || ['wait', 'Aguardando...'];
+  setStatus(sType, sText);
+  setMarketId(initialState.market_id);
+  setLocation(initialState.location);
+  // SSE — receber atualizações em tempo real
+  // ──────────────────────────────────────────
+  let es;
+
+  function connectSSE() {
+    es = new EventSource('/stream');
+
+    es.addEventListener('init', e => {
+      const d = JSON.parse(e.data);
+      updateCount(d.state.current_count, d.state.remaining_seconds, d.state.value_needed);
+      renderLastResults(d.last_results);
+      renderFullHistory(d.history);
+      roundCounter = d.history.length;
+      localHistory = d.history;
+      localLocation = d.state.location;
+      setStatus('live', '🔴 AO VIVO');
+      setMarketId(d.state.market_id);
+      setLocation(d.state.location);
+      computeAndRenderStats(localHistory, localLocation);
+    });
+
+    es.addEventListener('count_update', e => {
+      const d = JSON.parse(e.data);
+      updateCount(d.count, d.remaining, d.value_needed);
+      setStatus('live', '🔴 AO VIVO');
+    });
+
+    es.addEventListener('settlement', e => {
+      const d = JSON.parse(e.data);
+      roundCounter++;
+      addHistoryRow(d, roundCounter);
+      // Atualiza strip de últimos
+      const strip = document.getElementById('last-results');
+      const badge = badgeFor(d.result);
+      const existing = strip.querySelectorAll('.result-badge');
+      if (existing.length >= 10) existing[existing.length - 1].remove();
+      strip.insertAdjacentHTML('afterbegin', badge);
+      strip.querySelectorAll('span:not(.result-badge)').forEach(el => el.remove());
+      setStatus('wait', 'Rodada encerrada');
+      updateCount(d.count, null, d.value_needed);
+      localHistory.unshift(d);
+      computeAndRenderStats(localHistory, localLocation);
+    });
+
+    es.addEventListener('round_start', e => {
+      const d = JSON.parse(e.data);
+      updateCount(0, d.remaining);
+      setStatus('live', '🔴 AO VIVO — Nova rodada');
+    });
+
+    es.addEventListener('status_change', e => {
+      const d = JSON.parse(e.data);
+      if (d.status === 'reconectando') setStatus('wait', 'Reconectando ao servidor...');
+      if (d.status === 'erro_conexao') setStatus('error', 'Erro de conexão');
+    });
+
+    es.addEventListener('channel_change', e => {
+      const d = JSON.parse(e.data);
+      setMarketId(d.market_id);
+      setLocation(d.location);
+      localLocation = d.location;
+      setStatus('live', `🔄 Nova rodada — market #${d.market_id}`);
+      updateCount(0, null);
+      computeAndRenderStats(localHistory, localLocation);
+    });
+
+    es.addEventListener('history_loaded', e => {
+      const d = JSON.parse(e.data);
+      renderFullHistory(d.history);
+      renderLastResults(d.last_results);
+      roundCounter = d.history.length;
+      localHistory = d.history;
+      computeAndRenderStats(localHistory, localLocation);
+    });
+
+    es.onerror = () => {
+      setStatus('error', 'Conexão perdida — reconectando...');
+      es.close();
+      setTimeout(connectSSE, 3000);
+    };
+
+    es.onopen = () => setStatus('live', '🔴 AO VIVO');
+  }
+
+  connectSSE();
+</script>
+</body>
+</html>

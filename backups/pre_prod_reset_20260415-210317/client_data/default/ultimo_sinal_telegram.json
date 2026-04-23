@@ -1,0 +1,18 @@
+{
+  "rodovia": {
+    "market_id": "38745",
+    "rec": "MAIS",
+    "kind": "AO VIVO",
+    "conf": 84,
+    "odd": "0.38",
+    "strategy": "Ritmo ao vivo + divergente do historico (ATE/59%)"
+  },
+  "rua": {
+    "market_id": "38787",
+    "rec": "ATE",
+    "kind": "AO VIVO",
+    "conf": 91,
+    "odd": null,
+    "strategy": "Ritmo ao vivo + sem confirmacao historica"
+  }
+}

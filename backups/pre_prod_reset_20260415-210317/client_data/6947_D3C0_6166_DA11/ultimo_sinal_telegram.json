@@ -1,0 +1,10 @@
+{
+  "rua": {
+    "market_id": "39096",
+    "rec": "MAIS",
+    "kind": "AO VIVO",
+    "conf": 95,
+    "odd": "0.83",
+    "strategy": "Ritmo ao vivo + Rua: contexto local/hora + dia+hora (65%/66%)"
+  }
+}

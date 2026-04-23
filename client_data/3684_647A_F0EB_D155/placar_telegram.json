@@ -1,0 +1,17 @@
+{
+  "bitcoin": {
+    "date": "2026-04-23",
+    "wins": 0,
+    "losses": 0
+  },
+  "rodovia": {
+    "date": "2026-04-23",
+    "wins": 54,
+    "losses": 8
+  },
+  "rua": {
+    "date": "2026-04-23",
+    "wins": 0,
+    "losses": 0
+  }
+}

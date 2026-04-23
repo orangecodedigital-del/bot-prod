@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "bot_token": "8390477196:AAEoNEwoHd1tE3RULfp1MoracTwohyFL0mo",
+  "chat_id": "-1003796983199",
+  "markets": {
+    "bitcoin": {
+      "signal_min_confidence": 57.0
+    },
+    "rodovia": {
+      "signal_min_confidence": 57.0
+    },
+    "rua": {
+      "signal_min_confidence": 57.0
+    }
+  },
+  "last_status": "sent",
+  "last_message": "Ordem confirmada no mercado em Rodovia (5 min). topo real do book 0.67 (1.49x) | alvo aleatorio 1.54x",
+  "last_sent_at": "2026-04-20 11:12:42",
+  "last_market": "rodovia"
+}

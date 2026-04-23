@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "bot_token": "8780327478:AAEHLIXIZ6fdGuLEeks0ODz5EqeQ2HUllVo",
+  "chat_id": "-1003796983199",
+  "markets": {
+    "rodovia": {
+      "signal_min_confidence": 85.0
+    },
+    "rua": {
+      "signal_min_confidence": 74.0
+    }
+  },
+  "last_status": "sent",
+  "last_message": "Mensagem enviada com sucesso para Rua (4m 40s).",
+  "last_sent_at": "2026-04-15 13:09:10",
+  "last_market": "rua"
+}

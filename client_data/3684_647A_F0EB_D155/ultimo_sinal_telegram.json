@@ -1,0 +1,10 @@
+{
+  "rodovia": {
+    "market_id": "46484",
+    "rec": "MAIS",
+    "kind": "AO VIVO",
+    "conf": 90,
+    "odd": "0.64",
+    "strategy": "Ritmo ao vivo + Rodovia: contexto local/hora + dia+hora (59%/58%)"
+  }
+}

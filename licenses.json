@@ -1,0 +1,28 @@
+{
+  "licenses": [
+    {
+      "key": "3684-647A-F0EB-D155",
+      "username": "admin",
+      "password": "ba7RA4rE",
+      "customer_name": "teste",
+      "plan_name": "30 dias",
+      "notes": "",
+      "created_at": "2026-04-15T22:50:52",
+      "expires_at": "2026-05-15T22:51:10",
+      "duration_value": 30,
+      "duration_unit": "days",
+      "duration_label": "30 dias",
+      "revoked": false,
+      "device_fingerprint": "20C74244E676B1B6",
+      "device_name": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "activated_at": "2026-04-15T22:51:10",
+      "last_seen_at": "2026-04-16T02:10:13",
+      "bound_ip": "45.160.89.41",
+      "bound_device_hash": "387AE7AEF0FF2CB8",
+      "last_ip": "45.160.89.41",
+      "last_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "last_device_hash": "387AE7AEF0FF2CB8",
+      "released_at": "2026-04-16T00:42:40"
+    }
+  ]
+}

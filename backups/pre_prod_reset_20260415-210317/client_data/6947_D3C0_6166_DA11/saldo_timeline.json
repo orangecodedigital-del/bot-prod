@@ -1,0 +1,932 @@
+[
+  {
+    "ts": "2026-04-15T13:10:53",
+    "balance": 285.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:12:37",
+    "balance": 281.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:13:44",
+    "balance": 281.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:14:33",
+    "balance": 286.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:15:37",
+    "balance": 286.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:16:39",
+    "balance": 276.76,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:18:04",
+    "balance": 276.76,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:18:25",
+    "balance": 289.56,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:23:08",
+    "balance": 289.56,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:24:27",
+    "balance": 279.51,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:26:36",
+    "balance": 279.51,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:27:36",
+    "balance": 292.91,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:29:03",
+    "balance": 282.85,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:32:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:36:02",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:37:10",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:40:36",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:42:15",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:45:19",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:47:15",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:49:27",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:52:17",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:54:11",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:57:18",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T13:58:40",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:02:19",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:07:21",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:09:50",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:12:22",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:14:32",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:17:27",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:18:02",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:22:25",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:27:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:30:24",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:31:47",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:34:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:36:32",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:39:12",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:40:51",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:43:00",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:45:36",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:48:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:52:18",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:52:59",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T14:57:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:01:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:02:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:06:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:06:49",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:11:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:14:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:16:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:18:49",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:21:10",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:22:54",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:25:27",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:26:41",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:30:26",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:31:23",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:32:34",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:36:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:37:39",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:40:30",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:42:27",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:44:53",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:47:33",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:49:25",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:51:38",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:54:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:56:34",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T15:58:45",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:01:35",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:03:18",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:05:52",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:08:01",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:10:15",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:12:22",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:14:23",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:17:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:18:58",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:20:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:23:59",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:28:45",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:33:40",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:37:27",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:38:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:41:18",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:42:30",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:46:04",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:47:30",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:50:44",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:52:32",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T16:57:35",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:01:41",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:06:01",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:06:35",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:11:06",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:16:02",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:19:26",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:21:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:24:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:25:37",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:27:48",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:30:39",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:32:34",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:34:38",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:35:51",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:39:43",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:40:36",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:42:35",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:44:40",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:47:21",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:49:42",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:50:35",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:54:47",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:55:18",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T17:59:39",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:04:22",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:07:50",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:09:50",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:11:28",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:14:50",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:16:14",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:19:12",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:19:55",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:23:56",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:24:56",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:27:48",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:29:58",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:32:31",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:34:57",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:35:37",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:39:52",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:44:34",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:48:33",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:49:45",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:53:16",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:54:46",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:57:56",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T18:59:08",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:01:16",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:04:12",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:05:58",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:08:58",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:10:33",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:14:01",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:18:53",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:23:34",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:27:57",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:29:04",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:32:38",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:36:36",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:41:05",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:45:50",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:50:24",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:54:16",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:55:09",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:58:40",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T19:59:14",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:03:26",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:04:16",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:08:03",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:08:46",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:09:19",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:11:51",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:14:22",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:16:29",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:20:02",
+    "balance": 297.65,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:20:18",
+    "balance": 296.64,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:23:23",
+    "balance": 266.78,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:24:26",
+    "balance": 266.78,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:25:50",
+    "balance": 240.1,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:29:27",
+    "balance": 276.18,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:30:29",
+    "balance": 276.18,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:30:56",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:32:45",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:34:25",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:39:35",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:41:52",
+    "balance": 223.81,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:43:48",
+    "balance": 223.81,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:44:12",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:48:37",
+    "balance": 248.69,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:49:48",
+    "balance": 223.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:53:35",
+    "balance": 223.74,
+    "currency": "BRLX"
+  },
+  {
+    "ts": "2026-04-15T20:55:36",
+    "balance": 201.35,
+    "currency": "BRLX"
+  }
+]
